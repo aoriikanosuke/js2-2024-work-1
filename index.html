@@ -1,13 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Interactive Paint App for Kids</title>
+</head>
+<body>
+    <h1>Fun Paint App for Kids</h1>
+    <div class="toolbar">
+        <select id="tool">
+            <option value="pen">🖌️ Pen</option>
+            <option value="eraser">🩹 Eraser</option>
+            <option value="bucket">🪣 Fill</option>
+        </select>
+
+        <label for="color">🎨 Color: </label>
+        <input type="color" id="color" value="#ff69b4">
+
+        <label for="brushSize">🖌️ Brush Size: </label>
+        <input type="number" id="brushSize" min="1" max="50" value="10">
+
+        <button id="clearCanvas">🧹 Clear</button>
+        <button id="saveImage">💾 Save</button>
+    </div>
+    <canvas id="paintCanvas" width="800" height="600"></canvas>
+
+    <script src="src/main.js"></script>
+</body>
 </html>
